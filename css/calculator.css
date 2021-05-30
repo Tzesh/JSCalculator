@@ -31,8 +31,8 @@ header {
 	justify-content: center;
 	align-content: center;
 	min-height: 100vh;
-	grid-template-columns: repeat(5, 20%);
-	grid-template-rows: minmax(15rem, auto) repeat(5, 20%);
+	grid-template-columns: repeat(5, 15%);
+	grid-template-rows: minmax(15rem, auto) repeat(5, 10%);
 	font-family: 'Roboto', sans-serif;
 }
 
