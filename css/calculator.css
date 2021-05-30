@@ -1,0 +1,142 @@
+/* CSS Code of JS Calculator */
+
+/* Importing necessary fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+/* General */
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: linear-gradient(to right, #ff0000, #0099ff);
+	z-index: -1;
+}
+
+/* Header */
+
+header {
+	font-family: 'Raleway', sans-serif;
+	background-color: rgba(52, 52, 52, .50);
+}
+
+/* Main - Calculator */
+
+.calculator {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	min-height: 100vh;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: minmax(200px, auto) repeat(5, 20%);
+	font-family: 'Roboto', sans-serif;
+}
+
+.calculator>button {
+	cursor: pointer;
+	font-size: 2rem;
+	border: 3px solid black;
+	color: white;
+	outline: none;
+	background-color: rgba(0, 0, 0, .75);
+}
+
+.calculator>button:hover {
+	background-color: rgba(0, 0, 0, .85);
+}
+
+.calculator .delete, .calculator .clear {
+	color: black !important;
+	background-color: rgba(255, 187, 0, 0.75);
+	font-weight: bolder;
+}
+
+.calculator .delete:hover, .calculator .clear:hover {
+	background-color: rgba(255, 187, 0, 1) !important;
+}
+
+.output {
+	grid-column: 1 / -1;
+	background-color: rgb(8, 44, 11);
+	border: 10px solid black;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.output .previous-operand {
+	color: rgba(255, 255, 255, .75);
+	font-size: 1.5rem;
+}
+
+.output .current-operand {
+	color: white;
+	font-size: 2.5rem;
+}
+
+/* Footer */
+
+footer {
+	padding-top: 2rem;
+	font-family: 'Raleway', sans-serif;
+	background-color: rgba(52, 52, 52, .50);
+}
+
+footer button {
+	border: 1px solid black;
+	outline: none;
+	background-color: rgba(255, 255, 255, .75);
+	padding: 3px;
+}
+
+footer i {
+	font-size: 3rem;
+}
+
+/* Gradient Text */
+
+.gradient-text {
+	background-color: #ff0000;
+	background-image: linear-gradient( 45deg, #ff0000 16.666%, #ff8800 16.666%, #bbff00 33.333%, #00ff2a 33.333%, #00ff2a 50%, #00ff37 50%, #00ffea 66.666%, #00ccff 66.666%, #00b7ff 83.333%, #0099ff 83.333%);
+	background-size: 100%;
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
+.gradient-text:hover {
+	animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+	0% {
+		background-size: 200%;
+	}
+	40% {
+		background-size: 150%;
+	}
+	100% {
+		background-size: 100%;
+	}
+}
+
+@keyframes rainbow-text-simple-animation {
+	0% {
+		background-size: 100%;
+	}
+	80% {
+		background-size: 200%;
+	}
+	100% {
+		background-size: 200%;
+	}
+}
