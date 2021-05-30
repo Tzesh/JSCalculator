@@ -32,7 +32,7 @@ header {
 	align-content: center;
 	min-height: 100vh;
 	grid-template-columns: repeat(5, 20%);
-	grid-template-rows: minmax(200px, auto) repeat(5, 20%);
+	grid-template-rows: minmax(15rem, auto) repeat(5, 20%);
 	font-family: 'Roboto', sans-serif;
 }
 
